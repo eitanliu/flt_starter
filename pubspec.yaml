@@ -29,6 +29,7 @@ dependencies:
   shared_preferences: ^2.0.12
   sprintf: ^7.0.0
   encrypt: ^5.0.0
+  pointycastle: ^3.6.0
 
   # framework
   dio: ^5.3.2
