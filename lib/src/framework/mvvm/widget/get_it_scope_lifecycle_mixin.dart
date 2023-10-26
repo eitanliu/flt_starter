@@ -1,4 +1,4 @@
-// import 'package:flutter_starter/framework.dart';
+// import 'package:flt_starter/framework.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';

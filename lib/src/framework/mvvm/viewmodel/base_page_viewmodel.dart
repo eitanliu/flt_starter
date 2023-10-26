@@ -1,4 +1,4 @@
-import 'package:flutter_starter/framework/router.dart';
+import 'package:flt_starter/framework/router.dart';
 
 import '../properties/appbar_properties.dart';
 import '../properties/status_properties.dart';

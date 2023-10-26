@@ -1,4 +1,4 @@
-import 'package:flutter_starter/foundation.dart';
+import 'package:flt_starter/foundation.dart';
 
 mixin DialogProperties {
   ///

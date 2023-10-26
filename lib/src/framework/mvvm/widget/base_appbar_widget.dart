@@ -1,6 +1,6 @@
-import 'package:flutter_starter/extension.dart';
-import 'package:flutter_starter/framework.dart';
-import 'package:flutter_starter/widget.dart';
+import 'package:flt_starter/extension.dart';
+import 'package:flt_starter/framework.dart';
+import 'package:flt_starter/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 

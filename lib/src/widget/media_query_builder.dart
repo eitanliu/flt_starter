@@ -1,5 +1,5 @@
-// import 'package:flutter_starter/flutter_starter.dart';
-// import 'package:flutter_starter/utils/logcat.dart';
+// import 'package:flt_starter/flt_starter.dart';
+// import 'package:flt_starter/utils/logcat.dart';
 // import 'package:flutter/widgets.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 //

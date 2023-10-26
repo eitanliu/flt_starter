@@ -1,24 +1,24 @@
-#ifndef FLUTTER_PLUGIN_FLUTTER_STARTER_PLUGIN_H_
-#define FLUTTER_PLUGIN_FLUTTER_STARTER_PLUGIN_H_
+#ifndef FLUTTER_PLUGIN_FLT_STARTER_PLUGIN_H_
+#define FLUTTER_PLUGIN_FLT_STARTER_PLUGIN_H_
 
 #include <flutter/method_channel.h>
 #include <flutter/plugin_registrar_windows.h>
 
 #include <memory>
 
-namespace flutter_starter {
+namespace flt_starter {
 
-class FlutterStarterPlugin : public flutter::Plugin {
+class FltStarterPlugin : public flutter::Plugin {
  public:
   static void RegisterWithRegistrar(flutter::PluginRegistrarWindows *registrar);
 
-  FlutterStarterPlugin();
+  FltStarterPlugin();
 
-  virtual ~FlutterStarterPlugin();
+  virtual ~FltStarterPlugin();
 
   // Disallow copy and assign.
-  FlutterStarterPlugin(const FlutterStarterPlugin&) = delete;
-  FlutterStarterPlugin& operator=(const FlutterStarterPlugin&) = delete;
+  FltStarterPlugin(const FltStarterPlugin&) = delete;
+  FltStarterPlugin& operator=(const FltStarterPlugin&) = delete;
 
   // Called when a method is called on this plugin's channel from Dart.
   void HandleMethodCall(
@@ -26,6 +26,6 @@ class FlutterStarterPlugin : public flutter::Plugin {
       std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>> result);
 };
 
-}  // namespace flutter_starter
+}  // namespace flt_starter
 
-#endif  // FLUTTER_PLUGIN_FLUTTER_STARTER_PLUGIN_H_
+#endif  // FLUTTER_PLUGIN_FLT_STARTER_PLUGIN_H_

@@ -2,7 +2,7 @@ import FlutterMacOS
 import Cocoa
 import XCTest
 
-@testable import flutter_starter
+@testable import flt_starter
 
 // This demonstrates a simple unit test of the Swift portion of this plugin's implementation.
 //
@@ -11,7 +11,7 @@ import XCTest
 class RunnerTests: XCTestCase {
 
   func testGetPlatformVersion() {
-    let plugin = FlutterStarterPlugin()
+    let plugin = FltStarterPlugin()
 
     let call = FlutterMethodCall(methodName: "getPlatformVersion", arguments: [])
 

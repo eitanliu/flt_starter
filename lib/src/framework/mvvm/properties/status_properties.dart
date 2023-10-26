@@ -1,4 +1,4 @@
-import 'package:flutter_starter/extension.dart';
+import 'package:flt_starter/extension.dart';
 
 mixin StatusProperties {
   /// 状态信息

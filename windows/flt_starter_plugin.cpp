@@ -1,4 +1,4 @@
-#include "flutter_starter_plugin.h"
+#include "flt_starter_plugin.h"
 
 // This must be included before many other Windows headers.
 #include <windows.h>
@@ -13,17 +13,17 @@
 #include <memory>
 #include <sstream>
 
-namespace flutter_starter {
+namespace flt_starter {
 
 // static
-void FlutterStarterPlugin::RegisterWithRegistrar(
+void FltStarterPlugin::RegisterWithRegistrar(
     flutter::PluginRegistrarWindows *registrar) {
   auto channel =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
-          registrar->messenger(), "flutter_starter",
+          registrar->messenger(), "flt_starter",
           &flutter::StandardMethodCodec::GetInstance());
 
-  auto plugin = std::make_unique<FlutterStarterPlugin>();
+  auto plugin = std::make_unique<FltStarterPlugin>();
 
   channel->SetMethodCallHandler(
       [plugin_pointer = plugin.get()](const auto &call, auto result) {
@@ -33,11 +33,11 @@ void FlutterStarterPlugin::RegisterWithRegistrar(
   registrar->AddPlugin(std::move(plugin));
 }
 
-FlutterStarterPlugin::FlutterStarterPlugin() {}
+FltStarterPlugin::FltStarterPlugin() {}
 
-FlutterStarterPlugin::~FlutterStarterPlugin() {}
+FltStarterPlugin::~FltStarterPlugin() {}
 
-void FlutterStarterPlugin::HandleMethodCall(
+void FltStarterPlugin::HandleMethodCall(
     const flutter::MethodCall<flutter::EncodableValue> &method_call,
     std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>> result) {
   if (method_call.method_name().compare("getPlatformVersion") == 0) {
@@ -56,4 +56,4 @@ void FlutterStarterPlugin::HandleMethodCall(
   }
 }
 
-}  // namespace flutter_starter
+}  // namespace flt_starter

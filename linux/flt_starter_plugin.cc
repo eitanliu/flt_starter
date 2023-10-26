@@ -1,4 +1,4 @@
-#include "include/flutter_starter/flutter_starter_plugin.h"
+#include "include/flt_starter/flt_starter_plugin.h"
 
 #include <flutter_linux/flutter_linux.h>
 #include <gtk/gtk.h>
@@ -6,21 +6,21 @@
 
 #include <cstring>
 
-#include "flutter_starter_plugin_private.h"
+#include "flt_starter_plugin_private.h"
 
-#define FLUTTER_STARTER_PLUGIN(obj) \
-  (G_TYPE_CHECK_INSTANCE_CAST((obj), flutter_starter_plugin_get_type(), \
-                              FlutterStarterPlugin))
+#define FLT_STARTER_PLUGIN(obj) \
+  (G_TYPE_CHECK_INSTANCE_CAST((obj), flt_starter_plugin_get_type(), \
+                              FltStarterPlugin))
 
-struct _FlutterStarterPlugin {
+struct _FltStarterPlugin {
   GObject parent_instance;
 };
 
-G_DEFINE_TYPE(FlutterStarterPlugin, flutter_starter_plugin, g_object_get_type())
+G_DEFINE_TYPE(FltStarterPlugin, flt_starter_plugin, g_object_get_type())
 
 // Called when a method call is received from Flutter.
-static void flutter_starter_plugin_handle_method_call(
-    FlutterStarterPlugin* self,
+static void flt_starter_plugin_handle_method_call(
+    FltStarterPlugin* self,
     FlMethodCall* method_call) {
   g_autoptr(FlMethodResponse) response = nullptr;
 
@@ -43,30 +43,30 @@ FlMethodResponse* get_platform_version() {
   return FL_METHOD_RESPONSE(fl_method_success_response_new(result));
 }
 
-static void flutter_starter_plugin_dispose(GObject* object) {
-  G_OBJECT_CLASS(flutter_starter_plugin_parent_class)->dispose(object);
+static void flt_starter_plugin_dispose(GObject* object) {
+  G_OBJECT_CLASS(flt_starter_plugin_parent_class)->dispose(object);
 }
 
-static void flutter_starter_plugin_class_init(FlutterStarterPluginClass* klass) {
-  G_OBJECT_CLASS(klass)->dispose = flutter_starter_plugin_dispose;
+static void flt_starter_plugin_class_init(FltStarterPluginClass* klass) {
+  G_OBJECT_CLASS(klass)->dispose = flt_starter_plugin_dispose;
 }
 
-static void flutter_starter_plugin_init(FlutterStarterPlugin* self) {}
+static void flt_starter_plugin_init(FltStarterPlugin* self) {}
 
 static void method_call_cb(FlMethodChannel* channel, FlMethodCall* method_call,
                            gpointer user_data) {
-  FlutterStarterPlugin* plugin = FLUTTER_STARTER_PLUGIN(user_data);
-  flutter_starter_plugin_handle_method_call(plugin, method_call);
+  FltStarterPlugin* plugin = FLT_STARTER_PLUGIN(user_data);
+  flt_starter_plugin_handle_method_call(plugin, method_call);
 }
 
-void flutter_starter_plugin_register_with_registrar(FlPluginRegistrar* registrar) {
-  FlutterStarterPlugin* plugin = FLUTTER_STARTER_PLUGIN(
-      g_object_new(flutter_starter_plugin_get_type(), nullptr));
+void flt_starter_plugin_register_with_registrar(FlPluginRegistrar* registrar) {
+  FltStarterPlugin* plugin = FLT_STARTER_PLUGIN(
+      g_object_new(flt_starter_plugin_get_type(), nullptr));
 
   g_autoptr(FlStandardMethodCodec) codec = fl_standard_method_codec_new();
   g_autoptr(FlMethodChannel) channel =
       fl_method_channel_new(fl_plugin_registrar_get_messenger(registrar),
-                            "flutter_starter",
+                            "flt_starter",
                             FL_METHOD_CODEC(codec));
   fl_method_channel_set_method_call_handler(channel, method_call_cb,
                                             g_object_ref(plugin),

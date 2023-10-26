@@ -1,4 +1,4 @@
-import 'package:flutter_starter/framework/inject.dart';
+import 'package:flt_starter/framework/inject.dart';
 import 'package:flutter/material.dart';
 import 'package:view_model_provider/view_model_provider.dart';
 

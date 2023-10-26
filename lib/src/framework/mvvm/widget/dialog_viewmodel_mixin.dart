@@ -1,4 +1,4 @@
-import 'package:flutter_starter/foundation.dart';
+import 'package:flt_starter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:view_model_provider/pair_view_model_provider_mixin.dart';
 import 'package:view_model_provider/view_model_provider_mixin.dart';

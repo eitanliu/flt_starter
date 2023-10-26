@@ -1,4 +1,4 @@
-name: flutter_starter
+name: flt_starter
 description: A Flutter quick start framework project.
 version: 0.0.1
 homepage: https://github.com/eitanliu/flutter_starter
@@ -88,19 +88,19 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.eitanliu.flutter_starter
-        pluginClass: FlutterStarterPlugin
+        package: com.eitanliu.flt_starter
+        pluginClass: FltStarterPlugin
       ios:
-        pluginClass: FlutterStarterPlugin
+        pluginClass: FltStarterPlugin
       linux:
-        pluginClass: FlutterStarterPlugin
+        pluginClass: FltStarterPlugin
       macos:
-        pluginClass: FlutterStarterPlugin
+        pluginClass: FltStarterPlugin
       windows:
-        pluginClass: FlutterStarterPluginCApi
+        pluginClass: FltStarterPluginCApi
       web:
-        pluginClass: FlutterStarterWeb
-        fileName: flutter_starter_web.dart
+        pluginClass: FltStarterWeb
+        fileName: flt_starter_web.dart
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

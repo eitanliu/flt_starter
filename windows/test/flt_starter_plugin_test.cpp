@@ -8,9 +8,9 @@
 #include <string>
 #include <variant>
 
-#include "flutter_starter_plugin.h"
+#include "flt_starter_plugin.h"
 
-namespace flutter_starter {
+namespace flt_starter {
 namespace test {
 
 namespace {
@@ -22,8 +22,8 @@ using flutter::MethodResultFunctions;
 
 }  // namespace
 
-TEST(FlutterStarterPlugin, GetPlatformVersion) {
-  FlutterStarterPlugin plugin;
+TEST(FltStarterPlugin, GetPlatformVersion) {
+  FltStarterPlugin plugin;
   // Save the reply value from the success callback.
   std::string result_string;
   plugin.HandleMethodCall(
@@ -40,4 +40,4 @@ TEST(FlutterStarterPlugin, GetPlatformVersion) {
 }
 
 }  // namespace test
-}  // namespace flutter_starter
+}  // namespace flt_starter

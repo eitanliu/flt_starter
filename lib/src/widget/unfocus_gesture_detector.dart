@@ -1,4 +1,4 @@
-import 'package:flutter_starter/extension/object_extension.dart';
+import 'package:flt_starter/extension/object_extension.dart';
 import 'package:flutter/widgets.dart';
 import 'package:nested/nested.dart';
 

@@ -1,5 +1,5 @@
-import 'package:flutter_starter/extension.dart';
-import 'package:flutter_starter/foundation.dart';
+import 'package:flt_starter/extension.dart';
+import 'package:flt_starter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigationBarBinding extends StatelessWidget

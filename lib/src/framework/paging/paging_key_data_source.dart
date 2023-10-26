@@ -1,4 +1,4 @@
-import 'package:flutter_starter/flutter_starter.dart';
+import 'package:flt_starter/flt_starter.dart';
 
 import 'paging_data_source.dart';
 import 'paging_loader.dart';

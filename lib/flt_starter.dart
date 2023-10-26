@@ -1,5 +1,4 @@
-
-import 'flutter_starter_platform_interface.dart';
+import 'flt_starter_platform_interface.dart';
 
 export 'package:flutter_screenutil/flutter_screenutil.dart';
 export 'package:injectable/injectable.dart' hide test;
@@ -9,9 +8,8 @@ export 'extension.dart';
 export 'foundation.dart';
 export 'framework.dart';
 export 'widget.dart';
-
-class FlutterStarter {
+class FltStarter {
   Future<String?> getPlatformVersion() {
-    return FlutterStarterPlatform.instance.getPlatformVersion();
+    return FltStarterPlatform.instance.getPlatformVersion();
   }
 }

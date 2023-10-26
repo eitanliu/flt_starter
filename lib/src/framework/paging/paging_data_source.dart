@@ -1,4 +1,4 @@
-import 'package:flutter_starter/flutter_starter.dart';
+import 'package:flt_starter/flt_starter.dart';
 
 abstract class PagingDataSource<ITEM> {
   /// 获取可观测数据集合

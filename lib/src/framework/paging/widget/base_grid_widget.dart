@@ -1,4 +1,4 @@
-import 'package:flutter_starter/flutter_starter.dart';
+import 'package:flt_starter/flt_starter.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_refresh/easy_refresh.dart';
 

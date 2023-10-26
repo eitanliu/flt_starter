@@ -6,15 +6,15 @@ import 'dart:html' as html show window;
 
 import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
-import 'flutter_starter_platform_interface.dart';
+import 'flt_starter_platform_interface.dart';
 
-/// A web implementation of the FlutterStarterPlatform of the FlutterStarter plugin.
-class FlutterStarterWeb extends FlutterStarterPlatform {
-  /// Constructs a FlutterStarterWeb
-  FlutterStarterWeb();
+/// A web implementation of the FltStarterPlatform of the FltStarter plugin.
+class FltStarterWeb extends FltStarterPlatform {
+  /// Constructs a FltStarterWeb
+  FltStarterWeb();
 
   static void registerWith(Registrar registrar) {
-    FlutterStarterPlatform.instance = FlutterStarterWeb();
+    FltStarterPlatform.instance = FltStarterWeb();
   }
 
   /// Returns a [String] containing the version of the platform.

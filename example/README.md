@@ -1,6 +1,6 @@
-# flutter_starter_example
+# flt_starter_example
 
-Demonstrates how to use the flutter_starter plugin.
+Demonstrates how to use the flt_starter plugin.
 
 ## Getting Started
 

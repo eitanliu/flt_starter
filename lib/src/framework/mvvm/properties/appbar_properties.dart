@@ -1,4 +1,4 @@
-import 'package:flutter_starter/extension.dart';
+import 'package:flt_starter/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

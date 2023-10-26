@@ -1,4 +1,4 @@
-import 'package:flutter_starter/framework/mvvm.dart';
+import 'package:flt_starter/framework/mvvm.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

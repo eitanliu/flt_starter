@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_starter/extension/response_extension.dart';
+import 'package:flt_starter/extension/response_extension.dart';
 import 'package:dio/dio.dart';
 
 import 'logcat.dart';

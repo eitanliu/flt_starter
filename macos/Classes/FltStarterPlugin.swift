@@ -1,10 +1,10 @@
 import Cocoa
 import FlutterMacOS
 
-public class FlutterStarterPlugin: NSObject, FlutterPlugin {
+public class FltStarterPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "flutter_starter", binaryMessenger: registrar.messenger)
-    let instance = FlutterStarterPlugin()
+    let channel = FlutterMethodChannel(name: "flt_starter", binaryMessenger: registrar.messenger)
+    let instance = FltStarterPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
 

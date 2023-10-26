@@ -2,8 +2,8 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
-#include "include/flutter_starter/flutter_starter_plugin.h"
-#include "flutter_starter_plugin_private.h"
+#include "include/flt_starter/flt_starter_plugin.h"
+#include "flt_starter_plugin_private.h"
 
 // This demonstrates a simple unit test of the C portion of this plugin's
 // implementation.
@@ -13,10 +13,10 @@
 // built for x64 debug, run:
 // $ build/linux/x64/debug/plugins/my_plugin/my_plugin_test
 
-namespace flutter_starter {
+namespace flt_starter {
 namespace test {
 
-TEST(FlutterStarterPlugin, GetPlatformVersion) {
+TEST(FltStarterPlugin, GetPlatformVersion) {
   g_autoptr(FlMethodResponse) response = get_platform_version();
   ASSERT_NE(response, nullptr);
   ASSERT_TRUE(FL_IS_METHOD_SUCCESS_RESPONSE(response));
@@ -28,4 +28,4 @@ TEST(FlutterStarterPlugin, GetPlatformVersion) {
 }
 
 }  // namespace test
-}  // namespace flutter_starter
+}  // namespace flt_starter

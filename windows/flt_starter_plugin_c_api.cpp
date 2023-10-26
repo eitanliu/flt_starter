@@ -1,12 +1,12 @@
-#include "include/flutter_starter/flutter_starter_plugin_c_api.h"
+#include "include/flt_starter/flt_starter_plugin_c_api.h"
 
 #include <flutter/plugin_registrar_windows.h>
 
-#include "flutter_starter_plugin.h"
+#include "flt_starter_plugin.h"
 
-void FlutterStarterPluginCApiRegisterWithRegistrar(
+void FltStarterPluginCApiRegisterWithRegistrar(
     FlutterDesktopPluginRegistrarRef registrar) {
-  flutter_starter::FlutterStarterPlugin::RegisterWithRegistrar(
+  flt_starter::FltStarterPlugin::RegisterWithRegistrar(
       flutter::PluginRegistrarManager::GetInstance()
           ->GetRegistrar<flutter::PluginRegistrarWindows>(registrar));
 }

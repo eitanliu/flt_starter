@@ -1,4 +1,4 @@
-import 'package:flutter_starter/foundation/logcat.dart';
+import 'package:flt_starter/foundation/logcat.dart';
 import 'package:ua_parser_js/ua_parser_js.dart';
 
 import 'device.dart';

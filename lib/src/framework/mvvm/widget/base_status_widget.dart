@@ -1,5 +1,5 @@
-import 'package:flutter_starter/extension.dart';
-import 'package:flutter_starter/src/widget/builder_widget.dart';
+import 'package:flt_starter/extension.dart';
+import 'package:flt_starter/src/widget/builder_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';

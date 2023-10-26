@@ -1,11 +1,11 @@
 {
-    "name": "flutter_starter_example",
-    "short_name": "flutter_starter_example",
+    "name": "flt_starter_example",
+    "short_name": "flt_starter_example",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Demonstrates how to use the flutter_starter plugin.",
+    "description": "Demonstrates how to use the flt_starter plugin.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
