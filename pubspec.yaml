@@ -1,7 +1,7 @@
 name: flt_starter
 description: A Flutter quick start framework project.
 version: 0.0.1
-homepage: https://github.com/eitanliu/flutter_starter
+homepage: https://github.com/eitanliu/flt_starter
 
 environment:
   sdk: '>=3.0.6 <4.0.0'

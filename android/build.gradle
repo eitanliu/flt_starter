@@ -1,4 +1,4 @@
-group 'com.eitanliu.flutter_starter'
+group 'com.eitanliu.flt_starter'
 version '1.0-SNAPSHOT'
 
 buildscript {
