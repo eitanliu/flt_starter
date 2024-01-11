@@ -8,10 +8,12 @@ enum UnFocusBehavior {
 }
 
 class UnFocusGestureDetector extends SingleChildStatelessWidget {
+  static const ignoreLabel = 'IgnoreUnFocus';
+
   /// 默认忽略[TextField]和为[Focus.debugLabel] 为`IgnoreUnFocus`
   static const List<String> defaultIgnoreLabels = [
     "EditableText",
-    "IgnoreUnFocus"
+    ignoreLabel,
   ];
 
   final UnFocusBehavior behavior;
@@ -101,10 +103,15 @@ class UnFocusGestureDetector extends SingleChildStatelessWidget {
     // logcat("nearestScope $nearestScope");
 
     final descendants = nearestScope?.traversalDescendants;
-    final editableTexts = descendants?.where((element) => ignoreLabels
-        .contains(element.context?.widget.asSafeType<Focus>()?.debugLabel));
-    final rects = editableTexts?.map((e) => e.rect);
-    final inEditableText = rects?.any((element) {
+    final editableTexts = descendants?.where(
+      (element) {
+        return ignoreLabels.contains(
+          element.context?.widget.asSafeType<Focus>()?.debugLabel,
+        );
+      },
+    );
+    final rectList = editableTexts?.map((e) => e.rect);
+    final inEditableText = rectList?.any((element) {
           // logcat("EditableText $element, ${details.globalPosition}");
           return element.contains(globalPosition);
         }) ??
@@ -115,7 +122,8 @@ class UnFocusGestureDetector extends SingleChildStatelessWidget {
       return;
     }
     final isEditableText = ignoreLabels.contains(
-        primaryFocus?.context?.widget.asSafeType<Focus>()?.debugLabel);
+      primaryFocus?.context?.widget.asSafeType<Focus>()?.debugLabel,
+    );
     // logcat("isEditableText $isEditableText");
 
     if (isEditableText) {
@@ -124,7 +132,7 @@ class UnFocusGestureDetector extends SingleChildStatelessWidget {
   }
 
   static ignoreUnFocus(Widget child) => Focus(
-        debugLabel: "IgnoreUnFocus",
+        debugLabel: ignoreLabel,
         child: child,
       );
 }
