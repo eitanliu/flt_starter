@@ -16,7 +16,6 @@ typedef BaseScaffoldWidgetBuilder<VM> = Widget? Function(
 typedef BaseScaffoldAppBarBuilder<VM> = PreferredSizeWidget? Function(
   BuildContext context,
   VM viewModel,
-  bool isShow,
 );
 
 typedef BaseScaffoldBodyBuilder<VM> = Widget? Function(
@@ -40,8 +39,7 @@ typedef BaseScaffoldBuilder<VM> = Widget Function(
 );
 
 abstract class BaseScaffoldBuilderFactory<VM> {
-  PreferredSizeWidget? buildAppBar(
-      BuildContext context, VM viewModel, bool isShow);
+  PreferredSizeWidget? buildAppBar(BuildContext context, VM viewModel);
 
   Widget? buildBottomNavigationBar(BuildContext context, VM viewModel);
 
@@ -342,8 +340,7 @@ class _BaseScaffoldWidgetState<VM extends BasePageViewModel>
     return Observer(
       builder: (context) {
         return Scaffold(
-          appBar:
-              buildAppBar(context, viewModel, viewModel.appBarVisible.value),
+          appBar: buildAppBar(context, viewModel),
           body: buildStatus(context, viewModel, child),
           floatingActionButton: widget.floatingActionButton,
           floatingActionButtonLocation: widget.floatingActionButtonLocation,
@@ -376,11 +373,12 @@ class _BaseScaffoldWidgetState<VM extends BasePageViewModel>
   PreferredSizeWidget? buildAppBar(
     BuildContext context,
     VM viewModel,
-    bool isShow,
   ) {
     return widget.appBarBuilder != null
-        ? widget.appBarBuilder?.call(context, viewModel, isShow)
-        : (isShow ? AppBarWidget(context, viewModel) : null);
+        ? widget.appBarBuilder?.call(context, viewModel)
+        : viewModel.appBarVisible.value
+            ? AppBarWidget(context, viewModel)
+            : null;
   }
 
   /// 构建 [Scaffold.bottomNavigationBar]

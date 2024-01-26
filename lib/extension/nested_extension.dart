@@ -19,12 +19,12 @@ extension NestedOnNonnullTransitionBuilderExtension
       key: key, builder: (context, child) => this(context, child!));
 }
 
-extension NestedOnWidgetMapBuilderExtension on WidgetMapBuilder {
+extension NestedOnWidgetMapBuilderExtension on WidgetConvertBuilder {
   SingleChildWidget toSingleChildWidget({Key? key}) =>
       SingleChildBuilder(key: key, builder: (context, child) => this(child));
 }
 
-extension NestedOnNonnullWidgetMapBuilderExtension on NonnullWidgetMapBuilder {
+extension NestedOnNonnullWidgetMapBuilderExtension on NonnullWidgetConvertBuilder {
   SingleChildWidget toSingleChildWidget({Key? key}) =>
       SingleChildBuilder(key: key, builder: (context, child) => this(child!));
 }
@@ -37,9 +37,9 @@ extension NestedOnListExtension on List {
           return e.toSingleChildWidget();
         } else if (e is NonnullTransitionBuilder) {
           return e.toSingleChildWidget();
-        } else if (e is WidgetMapBuilder) {
+        } else if (e is WidgetConvertBuilder) {
           return e.toSingleChildWidget();
-        } else if (e is NonnullWidgetMapBuilder) {
+        } else if (e is NonnullWidgetConvertBuilder) {
           return e.toSingleChildWidget();
         }
         return e;

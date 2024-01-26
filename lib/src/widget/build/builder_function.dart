@@ -16,10 +16,10 @@ typedef NullableValueWidgetBuilder<T> = Widget? Function(
     BuildContext context, T value, Widget? child);
 
 /// 非空 Widget -> 非空 Widget
-typedef NonnullWidgetMapBuilder = Widget Function(Widget child);
+typedef NonnullWidgetConvertBuilder = Widget Function(Widget child);
 
 /// 可空 Widget -> 非空 Widget
-typedef WidgetMapBuilder = Widget Function(Widget? child);
+typedef WidgetConvertBuilder = Widget Function(Widget? child);
 
 /// 可空 Widget -> 可空 Widget
 typedef NullableWidgetMapBuilder = Widget? Function(Widget? child);

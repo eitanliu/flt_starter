@@ -13,11 +13,13 @@ NullableIndexedWidgetBuilder nullableIndexedWidgetBuilder(
 ) =>
     builder;
 
-NonnullWidgetMapBuilder nonnullWidgetMapBuilder(
-        NonnullWidgetMapBuilder builder) =>
+NonnullWidgetConvertBuilder nonnullWidgetConvertBuilder(
+  NonnullWidgetConvertBuilder builder,
+) =>
     builder;
 
-WidgetMapBuilder widgetMapBuilder(WidgetMapBuilder builder) => builder;
+WidgetConvertBuilder widgetConvertBuilder(WidgetConvertBuilder builder) =>
+    builder;
 
 NullableWidgetMapBuilder nullableWidgetMapBuilder(
         NullableWidgetMapBuilder builder) =>

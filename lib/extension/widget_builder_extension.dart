@@ -8,7 +8,7 @@ extension WidgetBuilderOnListExtension on List {
     return this;
   }
 
-  List widgetMapBuilder(WidgetMapBuilder builder) {
+  List widgetMapBuilder(WidgetConvertBuilder builder) {
     add(builder);
     return this;
   }
